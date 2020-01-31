@@ -1,1 +1,9 @@
-<p>graficas1 works!</p>
+<div class="row">
+    <div *ngFor="let grafico of graficos | keyvalue" class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-grafico-dona [chartData]="grafico.value.data" [chartLabels]="grafico.value.labels" [chartType]="grafico.value.type" [leyenda]="grafico.value.leyenda"></app-grafico-dona>
+            </div>
+        </div>
+    </div>
+</div>
